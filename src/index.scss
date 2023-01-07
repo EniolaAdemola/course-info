@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap');/******************** REMOVE DEFAULT STYLES ********************/
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+ /******************** SCSS GLOBAL VARIABLES ********************/
+ $grayHue: 240;
+ $primaryColor: #228B22;
+//  $primaryColor: #3d5402;
+ $secondaryColor: #feef79;
+ $primaryColorLignt: #2d1631;
+ $secondaryColorLight: #dfcf5d;
+ $secondaryColorDark:rgba(219, 149, 110, 1);
+ $colorWhite:  #FFFFFF;
+ $colorWhiteLight: rgba(255, 255, 255, 0.3);;
+ $colorGray100: hsl($grayHue, 47%, 94%);/*almost white colour lightness is almost 100%*/
+ $secondaryColorButton: linear-gradient(180deg, #DB956E 0%, rgba(219, 149, 110, 0.36) 100%);
+ $secondaryColorHover: linear-gradient(170deg, #DB956E 0%, rgba(219, 149, 110, 0.36) 100%);
+ $colorGray200: hsla(0, 0%, 100%, 0.3);
+ 
+ 
+ $container-width-lg: 80%;
+ $container-width-md: 90%;
+ 
+ $transition: all 500ms ease; /* make sure all transition have a constant effect*/
+ 
+ ::-webkit-scrollbar {
+     width: 0.5em;
+ }
+ 
+ ::-webkit-scrollbar-track {
+     background: $secondaryColor;
+     margin-block: 0.5rem;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+     border-radius: 100vw;
+     background: $primaryColor;
+ }
+
+ 
+ body {
+     font-family: "Open Sans", "san-serif";
+     font-size: 16px;
+     color: $colorWhite;
+     background-color: $primaryColor;
+     overflow-x: hidden;
+     scroll-behavior: smooth;
+
+}
+
+.container {
+    width: $container-width-lg;
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
+.logo {
+    letter-spacing: 2px;
+    color: $colorWhite;
+    text-align: center;
+    font-size: 1rem;
+
+    span {
+        color: $secondaryColor
+    }
+}
+
+.link {
+    color: $colorWhite;
+}
+
+.btn-lg {
+    font-size: 1.2rem;
+    background: $secondaryColor;
+    color: $colorGray100;
+    border-radius: 2rem;
+    padding: 1rem;
+    border: 3px solid $secondaryColor;
+    transition: $transition;
+
+
+    &:hover {
+        background: $primaryColor;
+        transition: $transition;
+    }
+}
+
+.headline {
+    background-color: $secondaryColor;
+    height: 0.2rem;
+    margin: 0.3rem auto 1.3rem;
+    width: 50%;
+}
+
+.none {
+    display: none;
+}
+
+/******************** MEADIA QUERIES (medium screens) ********************/
+@media screen and (max-width: 1024px) {
+    .container {
+        width: $container-width-md;
+    }
+}
