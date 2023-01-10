@@ -1,0 +1,224 @@
+@use "./../../index" as var; // import global variable as an alias
+
+/*************** Medium Screen size ***************/
+@mixin tablet {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+/*************** Mobile Screen size ***************/
+@mixin mobile {
+    @media screen and (max-width: 720px) {
+        @content;
+    }
+}
+
+.steps__container {
+    display: flex;
+}
+
+.steps__container-value {
+    display: flex;
+    align-items: center;
+}
+
+.step__circle {
+    color: var.$colorWhiteLight;
+    width: 45px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid var.$colorWhite;
+    
+    @include tablet() {
+        width: 35px;
+        line-height: 30px;
+    }
+
+    @include mobile(){
+        width: 30px;
+        line-height: 30px;
+        font-size: 19px;
+    }
+}
+
+.step__line {
+    width: 10rem;
+    height: 0.1rem;
+    border: 1px solid var.$colorWhiteLight;
+    @include tablet() {
+        width: 5.3rem;
+    }
+
+    @include mobile() {
+        width: 3rem;
+    }
+}
+
+.pending .step__circle{
+    color: var.$secondaryColor;
+    border: 2px solid var.$secondaryColor;
+}
+
+.done {
+    .step__circle {
+        background-color: var.$secondaryColor;
+        border: 2px solid var.$secondaryColor;
+    }
+    
+    .step__line {
+        border: 1px solid var.$secondaryColor;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+
+    @include mobile(){
+        font-size: 1.2rem;
+    }
+}
+
+/*************** Step1 Style ***************/
+.step1__container {
+    margin-block: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name__container {
+    margin-block: 3rem;
+    display: flex;
+    gap: 1rem;
+
+    @include mobile() {
+        flex-direction: column;
+    }
+
+
+    input {
+        color: var.$colorWhite;
+        cursor: pointer;
+         width: 20rem;
+         height: 3rem;
+         border-radius: 5px;
+         padding: 0.7rem 4rem;
+         text-align: left;
+         background-color: var.$colorGray200;
+
+        @include mobile() {
+            width: 15rem
+        }
+    }
+    
+    button {
+        width: 5rem;
+        font-size: 1.2rem;
+        background: var.$secondaryColor;
+        color: var.$colorGray100;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        border: 3px solid var.$secondaryColor;
+        transition: var.$transition;
+        
+        &:hover {
+            background: var.$secondaryColorLight;
+            transition: var.$transition;
+        }
+        @include mobile() {
+            margin-top: 1rem;
+            width: 15rem
+        }
+    }
+}
+
+
+/*************** Step2 Style ***************/
+.courseofstudy {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    label {
+        font-size: 2rem;
+    }
+    select {
+        font-size: 1rem;
+        width: 20rem;
+        height: 2rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        background: var.$colorGray100;
+        
+        @include mobile() {
+            margin-top: 1rem;
+            width: 15rem
+        }
+    }
+    
+    button {
+        width: 20rem;
+        font-size: 1.2rem;
+        background: var.$secondaryColor;
+        color: var.$colorGray100;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        border: 3px solid var.$secondaryColor;
+        transition: var.$transition;
+        
+        &:hover {
+            background: var.$secondaryColorLight;
+            transition: var.$transition;
+        }
+        @include mobile() {
+            margin-top: 1rem;
+            width: 15rem
+        }
+    }
+}
+
+    /*************** Step3 Style ***************/
+    .level {
+        margin-block: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .level__container  {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        margin-block: 1rem;
+   
+        @include tablet() {
+            grid-template-columns: repeat(2, 1fr);
+        }
+   
+        @include mobile() {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        p { cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            padding: 0.7rem 4rem;
+            text-align: center;
+            background-color: var.$colorGray200;
+            color: var.$colorWhite;
+            transition: var.$transition;
+   
+            &:hover {
+                transition: var.$transition;
+                color: var.$colorWhiteLight;
+            }
+        }
+    }
