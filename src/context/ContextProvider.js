@@ -7,7 +7,7 @@ const ContextProvider = ({ children }) => {
 
     const [userDetails, setUserDetails] = useState({
         userName: "",
-        courseOfStudy: "Computer Science",
+        courseOfStudy: "",
         level: ""
     })
 
