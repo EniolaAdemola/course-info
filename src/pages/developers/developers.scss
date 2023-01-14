@@ -1,0 +1,72 @@
+@use "./../../index" as var; // import global variable as an alias
+
+/*************** Medium Screen size ***************/
+@mixin tablet {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+/*************** Mobile Screen size ***************/
+@mixin mobile {
+    @media screen and (max-width: 720px) {
+        @content;
+    }
+}
+
+.developers__container {
+    margin-top: 5%;
+    display: grid;
+    place-items: center;
+    
+    @include tablet(){
+        margin-top: 8%;
+    }
+}
+
+.team__profiles-wrap {
+    margin-top: 3rem;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    
+    @include tablet() {
+        grid-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile() {
+        grid-gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.team__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.courseinfo__team-member {
+    width: 256px;
+    height: 256px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 1px solid rgba(219,220,224,.5);
+    box-shadow: 15px 30px 40px rgba(64,25,109,.07);
+    border-radius: 400px;
+    opacity: 20;
+    @include mobile() {
+        width: 156px;
+        height: 156px;
+    }
+}
+
+.team__profile-info {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
