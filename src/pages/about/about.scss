@@ -1,0 +1,125 @@
+@use "./../../index" as var; // import global variable as an alias
+
+/*************** Medium Screen size ***************/
+@mixin tablet {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+/*************** Mobile Screen size ***************/
+@mixin mobile {
+    @media screen and (max-width: 720px) {
+        @content;
+    }
+}
+
+/*************** About Section One ***************/
+
+.about__section1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding: 2rem;
+    min-height: 440px;
+    align-items: center;
+    @include tablet(){
+        flex-direction: column;
+    }
+    
+    .about__left {
+        width: 50%;
+        @include tablet(){
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            color: var.$colorWhite;
+            margin-bottom: 20px;
+            font-weight: 900;
+            font-size: 2.5rem;
+            line-height: 1.15;
+            span {
+                color: var.$secondaryColor
+            }
+            
+            a {
+                color: var.$colorWhite;
+            }
+
+            @include mobile(){
+                font-size: 2rem;
+            }
+        }
+        
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 23px;
+            font-weight: 600;
+            color: var.$colorGray100;
+        }
+        a {
+            color: var.$colorWhite;
+        }
+    }
+    
+    .about__right {
+        display: grid;
+        width: 50%;
+        height: auto;
+        place-items: center;
+        object-fit: cover;
+        @include tablet(){
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        
+        img {
+            // max-width: 730px;
+            // max-height: 435px;
+            width: 70%;
+            height: auto;
+            border-radius: 40% 20% 40% 20%;
+            transition: var.$transition;
+            
+            &:hover {
+                transition: var.$transition;
+                border-radius: 20% 40% 20% 40%;
+            }
+        }   
+    }   
+}
+
+/*************** About Section Two ***************/
+.about__section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 2.25rem;
+        line-height: 1.38;
+        margin-bottom: 20px;
+        font-weight: 900;
+        color: var.$colorWhite;
+        text-align: center;
+    }
+    .courseinfo__story {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        p {
+            max-width: 600px;
+            margin-bottom: 32px;
+            text-align: center;
+            @include tablet(){
+                max-width: 500px;
+            }
+        }
+    }
+
+}
