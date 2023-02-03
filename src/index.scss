@@ -100,7 +100,7 @@
     background-color: $secondaryColor;
     height: 0.2rem;
     margin: 0.3rem auto 1.3rem;
-    width: 50%;
+    width: 20%;
 }
 
 .none {
@@ -114,6 +114,22 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
+
+.btn {
+    color: $colorWhite;
+    width: fit-content;
+    padding: 0.9rem 2rem;
+    background-color: $secondaryColor;
+    border-radius: 0.5rem;
+    transition: $transition;
+    border: 3px solid $secondaryColor;
+    
+    &:hover {
+        background: $primaryColor;
+        transition: $transition;
+    }
+}
+
 /******************** MEADIA QUERIES (medium screens) ********************/
 @media screen and (max-width: 1024px) {
     .container {
