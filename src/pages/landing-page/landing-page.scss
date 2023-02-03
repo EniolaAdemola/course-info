@@ -1,0 +1,155 @@
+@use "./../../index.scss" as var; // import global variable as an alias
+
+/*************** Medium Screen size ***************/
+@mixin tablet {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+/*************** Mobile Screen size ***************/
+@mixin mobile {
+    @media screen and (max-width: 720px) {
+        @content;
+    }
+}
+
+.developers__container {
+    // margin-top: 5%;
+    display: grid;
+    place-items: center;
+    
+    @include tablet(){
+        // margin-top: 8%;
+    }
+}
+
+/*************** MAINHEADER STYLES ***************/
+.main__header {
+    height: calc(100vh - 15rem);
+    // width: 100vw;
+    display: grid;
+    // place-items: center;
+    margin-block: 3rem;
+    @include tablet(){
+        height: calc(100vh - 40rem);
+    }
+    @include mobile{
+        height: calc(100vh - 15rem);
+    }
+
+    .main__header-container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
+
+        // main header left dtyles
+        .main__header-left {
+            display: grid;
+            gap: 2rem;
+            padding: 3rem  0 2rem;
+            font-family: 'Open Sans', sans-serif;
+
+            h1 {
+                font-size: 2.5rem; 
+            }
+
+            p {
+                color: var.$colorGray100;
+                @include mobile {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .main__header-right {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 100%;
+            margin-block: 3rem;
+            // position: relative; //uncomment this to move child around
+            @include mobile {
+                display: none;
+            }
+
+            .main__header-image {
+                object-fit: cover;
+                // position: absolute;
+                right: 0;
+                left: 5rem;
+                // padding: 3rem 0 2rem;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+/*************** INFOSECTION STYLES ***************/
+.info__section {
+    margin-top: 10rem;
+    h1 {
+        margin-bottom: 4rem;
+        text-align: center;
+        @include mobile {
+            font-size: 1.2rem;
+        }
+    }
+
+    .info__section-container {
+        display: flex;
+        gap: 15rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem;
+        margin-block: 3rem;
+        @include tablet() {
+            gap: 5rem;
+            flex-direction: column;
+            margin-block: 1.5rem;
+        }
+    }
+
+    .box {
+        height: 228px;
+        width: 328px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.008) 117.11%);
+        color: var.$colorWhite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        .arrow {
+            background: var.$colorWhiteLight;
+            width: 50px;
+            line-height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 25px;
+            border: 2px solid var.$colorWhite;
+            
+            @include tablet() {
+                width: 35px;
+                line-height: 30px;
+            }
+
+            @include mobile(){
+                width: 30px;
+                line-height: 30px;
+                font-size: 19px;
+            }
+        }
+    }
+}
