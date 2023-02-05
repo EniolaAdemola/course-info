@@ -28,7 +28,7 @@
     margin-top: 3rem;
     display: grid;
     grid-gap: 3rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     place-items: center;
     
     @include tablet() {
@@ -49,14 +49,16 @@
 }
 
 .courseinfo__team-member {
-    width: 256px;
-    height: 256px;
+    width: 200px;
+    height: 200px;
     -o-object-fit: cover;
     object-fit: cover;
     border: 1px solid rgba(219,220,224,.5);
     box-shadow: 15px 30px 40px rgba(64,25,109,.07);
     border-radius: 400px;
     opacity: 20;
+    display: grid;
+    place-items: cnter;
     @include mobile() {
         width: 156px;
         height: 156px;
