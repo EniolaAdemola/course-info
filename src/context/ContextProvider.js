@@ -24,7 +24,7 @@ const ContextProvider = ({ children }) => {
 
 	return (
 		<StepInfoContext.Provider
-			value={{ userDetails, activeStyle, setActiveStyle, userDetails, setUserDetails, handleChange }}
+			value={{ userDetails, activeStyle, setActiveStyle, setUserDetails, handleChange }}
 		>
 			{children}
 		</StepInfoContext.Provider>
