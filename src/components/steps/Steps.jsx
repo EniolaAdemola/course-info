@@ -15,7 +15,7 @@ const Steps = () => {
 						className={`steps__container-value ${
 							i + 1 === activeStyle ? "pending" : i < activeStyle ? "done" : ""
 						}`}
-						onClick={() => setActiveStyle(i + 1)} //comment out for testing the steps(dev mode)
+						// onClick={() => setActiveStyle(i + 1)} //comment out for testing the steps(dev mode)
 					>
 					  <div className="step__circle">{i+1}</div>
             <div className={`step__line ${i+1 === 3 ? "none" : ""}`}></div>
