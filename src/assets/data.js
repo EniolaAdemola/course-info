@@ -6,15 +6,15 @@ import { FaLinkedin } from "react-icons/fa";
 export const aboutStory = [
 	{
 		id: 1,
-		story: "December 2022, a group of computing science studentDecember 2022, a group of computing science studentDecember 2022, a group of computing science studentDecember 2022, a group of computing science student"
+		story: "December 2022, a group of computing science students decided to come up with an ida to design and implement a user interface to allow students to view their course schedules, check all their courses information, and know more about it without explictly being a registered student."
 	},
 	{
 		id: 2,
-		story: "December 2022, a group of computing science studentDecember 2022, a group of computing science studentDecember 2022, a group of computing science studentDecember 2022, a group of computing science student"
+		story: "COURSEINFO is a place for everyone who wants to know more about a particular course check all the necessary information and also have the ability to search about a course code to know more about the a course information."
 	},
 	{
 		id: 3,
-		story: "December 2022, a group of computing science studentDecember 2022, a group of computing science studentDecember 2022, a group of computing science studentDecember 2022, a group of computing science student"
+		story: "It's designed and developed using Agile methodology so it can adapt to changes at any time it is an open source project and all the source code can be found in the github repository at the footer section"
 	}	
 ];
 
@@ -82,7 +82,7 @@ export const socialIcons = [
 	{
 		id: 2,
 		icon: <AiOutlineGithub />,
-		link: "https://www.github.com/EniolaAdemola/",
+		link: "https://www.github.com/EniolaAdemola/course-info",
 	},
 	{
 		id: 3,
