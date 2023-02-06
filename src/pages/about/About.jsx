@@ -10,8 +10,7 @@ const About = () => {
         <div className='container about__section1'> 
           <div className='about__left'>
               <h1>About <Link to="/">COU<span>RSE</span>INFO</Link></h1>
-              <p>December 2022, a group of computing science student, December 2022, a group of
-               computing science student, December 2022. </p>
+              <p>A website where you get to know more about a particular course from anywhere in the world without explicitly being a student or registering for that course.</p>
               <button className='btn-lg'><Link to="/check-info">Check my Info</Link></button>
           </div>
           <div className="about__right">
@@ -32,7 +31,7 @@ const About = () => {
         <h1>Who we are <div className="headline"></div></h1>
         <div className="courseinfo__story">
               <p>
-                We empower individuals with access to course information, simple payments solutions, high-yield investment opportunities and easy-to-use tools for personal financial management. Carbon is headquartered in Lagos, Nigeria. We are a global company of over 90 employees with operations in Nigeria, Ghana and Kenya
+               We are computing science student of Osun State University 2019/2020 set who came up with the innovative idea of building a web based system using recent best practices websites
               </p>
         </div>
       </div>
