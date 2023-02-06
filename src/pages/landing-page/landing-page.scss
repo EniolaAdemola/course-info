@@ -100,9 +100,9 @@
     margin-top: 10rem;
     h1 {
         margin-bottom: 4rem;
+        font-size: 2rem;
         text-align: center;
         @include mobile {
-            font-size: 1.2rem;
         }
     }
 
