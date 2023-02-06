@@ -1,0 +1,53 @@
+@use "./../../index" as var; // import global variable as an alias
+
+/*************** Medium Screen size ***************/
+@mixin tablet {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+/*************** Mobile Screen size ***************/
+@mixin mobile {
+    @media screen and (max-width: 720px) {
+        @content;
+    }
+}
+
+.display__info {
+    display: grid;
+    margin-top: 8rem;
+    width: 80%;
+    place-items: center;
+    gap: 1rem;
+
+    span {
+        color: var.$secondaryColor;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.course__container {
+    margin-top: 3rem;
+    justify-content: center;
+    gap: 3rem;
+
+    @include mobile(){
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    img {
+        width: 45%;
+        @include mobile(){
+            width: 90%;
+        }
+    }
+
+    .back__home {
+        margin-top: 3rem;
+    }
+}
