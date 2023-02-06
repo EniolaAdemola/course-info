@@ -17,13 +17,19 @@
 
 .search__container {
   margin-block: 7rem;
-  display: grid;
+  display: flex;
   flex-direction: column ;
   position: relative;
   gap: 2rem;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
+  // place-items: center;
   max-width: 50%;
   // padding: 2rem;
+  
+  @include mobile() {
+    min-width: 90%;
+  }
 }
   
 .search__box {
@@ -35,19 +41,16 @@
   transition: .2s;
   width: 100%;
   color: var.$primaryColor;
-
+  
   @include mobile(){
-    font-size: 15px;
+    padding: 20px 30px;
+    width: 100%;
   }
 
   &::placeholder {
     color: var.$secondaryColor;
   }
 }
-
-// tr:nth-child(even) {
-//   background-color: rgba(150, 212, 212, 0.4);
-// }
 
 .search__icon {
   background-color: var.$primaryColor;
@@ -64,28 +67,36 @@
   width: 50px;
   padding: 0.5rem;
   margin-bottom: 8.5rem;
-
+  
   svg {
-    font-size: 30px;
+    padding: 0.1rem;
+    font-size: 29px;
+  }
+  
+  @include mobile(){
+    width: 40px;
+    height: 40px;
   }
 }
 
 .search__result {
   display: grid;
   place-items: center;
-  // max-height: px;
-  // overflow-y: scroll; 
+  
+  @include mobile(){
+    overflow-x: scroll;
+  }
   .search__result-table {
     // border: 3;
     text-align: center;
     margin: 25px 0;
     font-size: 0.9em;
     min-width: 400px;
-    // table-layout: fixed;
-    // width: 90%;
-    // height: 100%;
-    // border-collapse: collapse;
-    // border-color: black;
+    
+    @include mobile(){
+      font-size: 0.9em;
+      min-width: 200px;
+    }
 
     thead tr {
       background-color: #285c00;
@@ -100,45 +111,14 @@
     }
 
     tbody tr {
-      // background: red;
       border-bottom: 3px solid var.$colorGray100;
     }
 
     tbody tr:nth-of-type(even){
       background-color: #BFDD97;
-      // background-color: #f3f3f3;
     }
     tbody tr:nth-of-type(odd){
       background-color: #A3CE68;
-      // background-color: #f3f3f3;
     }
-
-    // thead th:nth-child(1) {
-    //   // background-color: #000;
-    //   width: 10%;
-    // }
-    
-    // thead th:nth-child(2) {
-    //   width: 40%;
-    // }
-    
-    // thead th:nth-child(3) {
-    //   width: 30%;
-    // }
-    
-    // thead th:nth-child(4) {
-    //   width: 10%;
-    // }
-
-    // th:nth-child(even),td:nth-child(even) {
-    //   background-color: rgba(150, 212, 212, 0.4);
-    // }
   }
 }
-  
-  
-  
-//   th,
-//   td {
-//     padding: 20px;
-//   }
