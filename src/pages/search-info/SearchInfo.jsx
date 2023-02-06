@@ -12,7 +12,7 @@ const SearchInfo = () => {
 
   return (
       <div className='container search__container'>
-        <input className='search__box' value={query} onChange = {e => setQuery(e.target.value)} placeholder="Search for a course code(CIT101) . . ." type="search"/>
+        <input className='search__box' value={query} onChange = {e => setQuery(e.target.value)} placeholder="Search for a course code(CIT 111) . . ." type="search"/>
         <div className="search__icon">
           <BsSearch />
         </div>
