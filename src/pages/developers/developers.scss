@@ -15,13 +15,9 @@
 }
 
 .developers__container {
-    margin-top: 5%;
+    margin-top: 7rem;
     display: grid;
     place-items: center;
-    
-    @include tablet(){
-        margin-top: 8%;
-    }
 }
 
 .team__profiles-wrap {
