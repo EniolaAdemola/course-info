@@ -10,7 +10,7 @@ const Step3 = () => {
   
   return (
     <div className='level'>
-      <h2>Very Good {userDetails.userName}!, Lastly pick a Level? </h2>
+      <h2>Very Good {userDetails.userName}! Lastly pick a Level? </h2>
       <div className='level__container'>
         {
           levels.map(({id, userLevel}) => {

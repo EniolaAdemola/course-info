@@ -7,7 +7,7 @@ const Step2 = () => {
 
   return (
     <div className='courseofstudy'>
-    <h2 htmlFor="department">Hey {userDetails.userName}, kindly choose your course of study:</h2>
+    <h2 htmlFor="department">Hey {userDetails.userName}, kindly choose your course of study?</h2>
     {/* Course of study is automatically Computer science from the context provider */}
     <select name="courseOfStudy" id="department" onChange={handleChange}>
       <option value="N/A">N/A</option>
