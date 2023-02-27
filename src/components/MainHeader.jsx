@@ -11,7 +11,7 @@ const MainHeader = () => {
 				>
 					<h1>Worried about your course information ?</h1>
 					<p>
-						COURSEINFO provides you with information about the course you are offering in university.
+						COURSEINFO provides you with information about the course you are offering in the university.
 					</p>
 					<Link to="/check-info" className="btn lg">
 						Check My COURSEINFO - it's free
