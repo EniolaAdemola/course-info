@@ -31,7 +31,7 @@ const About = () => {
         <h1>Who we are <div className="headline"></div></h1>
         <div className="courseinfo__story">
               <p>
-               We are computing science student of Osun State University 2019/2020 set who came up with the innovative idea of building a web based system using recent best practices websites
+              We are a group of computing science students from the 2019/2020 set of Osun State University who have developed an innovative web-based system using the latest best practices in website development.
               </p>
         </div>
       </div>
