@@ -10,11 +10,11 @@ export const aboutStory = [
 	},
 	{
 		id: 2,
-		story: "COURSEINFO is a place for everyone who wants to know more about a particular course check all the necessary information and also have the ability to search about a course code to know more about the a course information."
+		story: "COURSEINFO is a place for everyone who wants to know more about a particular course check all the necessary information and also have the ability to search about a course code to know more about a course, our website is here to help"
 	},
 	{
 		id: 3,
-		story: "It's designed and developed using Agile methodology so it can adapt to changes at any time it is an open source project and all the source code can be found in the github repository at the footer section"
+		story: "It's designed and developed using Agile methodology so it can adapt to changes at any time it is an open source project and all the source code can be found in the 'github repository' at the footer section"
 	}	
 ];
 
@@ -82,7 +82,7 @@ export const socialIcons = [
 	{
 		id: 2,
 		icon: <AiOutlineGithub />,
-		link: "https://www.github.com/EniolaAdemola/course-info",
+		link: "https://www.github.com/EniolaAdemola/",
 	},
 	{
 		id: 3,
