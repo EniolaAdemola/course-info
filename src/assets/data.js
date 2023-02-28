@@ -82,7 +82,7 @@ export const socialIcons = [
 	{
 		id: 2,
 		icon: <AiOutlineGithub />,
-		link: "https://www.github.com/EniolaAdemola/",
+		link: "https://github.com/EniolaAdemola/course-info",
 	},
 	{
 		id: 3,
