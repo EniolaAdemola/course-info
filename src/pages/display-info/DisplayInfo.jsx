@@ -2,7 +2,7 @@ import React from 'react'
 import { useStepInfoContext } from '../../context/ContextProvider';
 import "./display-info.scss"
 import Image1 from "../../assets/images/100L-1st.PNG"
-import Image2 from "../../assets/images/100L-1st.PNG"
+import Image2 from "../../assets/images/100L-2nd.PNG"
 import Image3 from "../../assets/images/200L-1st.PNG"
 import Image4 from "../../assets/images/200L-2nd.PNG"
 import Image5 from "../../assets/images/300L-1st.PNG"
